@@ -1,5 +1,6 @@
 package pe.edu.vallegrande.project.rest;
 
+import org.springframework.web.bind.annotation.PatchMapping;
 import pe.edu.vallegrande.project.model.Customer;
 import pe.edu.vallegrande.project.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
