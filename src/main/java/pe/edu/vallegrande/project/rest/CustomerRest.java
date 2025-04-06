@@ -46,4 +46,21 @@ public class CustomerRest {
         return customerService.update(customer);
     }
 
+    @GetMapping("/state/{state}")
+    public List<Customer> getCustomersByState(@PathVariable String state) {
+        return customerService.findByState(state);
+    }
+
+    @PatchMapping("/{id}/delete")
+    public Customer deleteLogical(@PathVariable Long id) {
+        return customerService.deleteLogical(id);
+    }
+
+    
+    @PatchMapping("/{id}/restore")
+    public Customer restoreLogical(@PathVariable Long id) {
+        return customerService.restoreLogical(id);
+    }
+
+    
 }
