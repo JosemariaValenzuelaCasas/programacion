@@ -46,4 +46,25 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.save(customer);
     }
 
+    public Customer deleteLogical(Long id) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Customer no encontrado con id: " + id));
+        customer.setState("D"); 
+        return customerRepository.save(customer);
+    }
+
+    
+    public Customer restoreLogical(Long id) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Customer no encontrado con id: " + id));
+        customer.setState("A");
+        return customerRepository.save(customer);
+    }
+
+    @Override
+    public List<Customer> findByState(String state) {
+        log.info("Listando clientes con estado: " + state);
+        return customerRepository.findByState(state); 
+    }
+
 }
