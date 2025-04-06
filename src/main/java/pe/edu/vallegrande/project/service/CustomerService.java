@@ -13,5 +13,10 @@ public interface CustomerService {
     Customer save(Customer customer);
 
     Customer update(Customer customer);
+
+    Customer deleteLogical(Long id);
+
+    Customer restoreLogical(Long id);
     
+    List<Customer> findByState(String state);
 }
