@@ -61,7 +61,7 @@
 			<artifactId>mssql-jdbc</artifactId>
 			<version>12.10.0.jre11</version>
 		</dependency>
-		<!-- Reiniciar Automáticamente la Aplicación -->
+		<!-- Reiniciar Automáticamente la Aplicsssación -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
